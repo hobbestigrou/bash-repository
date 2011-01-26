@@ -15,6 +15,14 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
+#Enable programmable completion features (you don't need to enable
+#this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
+
 #If this is an xterm set the title to user@host:dir
 case "$TERM" in
     xterm*|rxvt*)
