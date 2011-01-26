@@ -1,3 +1,5 @@
+#!/bin/sh
+
 echo "Removing ~/.bash-repository"
 if [[ -d ~/.bash-repository ]]
 then
